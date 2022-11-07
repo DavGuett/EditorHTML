@@ -17,6 +17,7 @@
         DrawScreen();
         ShowOptions();
         int option = int.Parse(Console.ReadLine());
+        HandleMenuOption(option);
     }
     public static void DrawScreen()
     {
@@ -48,5 +49,25 @@
         Console.WriteLine("3 - Sair");
         Console.SetCursorPosition(3, 10);
 
+    }
+
+    public static void HandleMenuOption(int option)
+    {
+        switch (option)
+        {
+            case 1: 
+                Console.WriteLine("Editor");
+                break;
+            case 2:
+                Console.WriteLine("View");
+                break;
+            case 3: 
+                 Console.Clear();
+                 Environment.Exit(0);
+                 break;
+            default:
+                Show();
+                break;
+        }
     }
 }
