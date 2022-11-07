@@ -1,4 +1,5 @@
-﻿public static class Menu
+﻿namespace EditorHTML; 
+public static class Menu
 {
     static void DrawColumn(int numberOfColumns)
     {
@@ -55,16 +56,16 @@
     {
         switch (option)
         {
-            case 1: 
-                Console.WriteLine("Editor");
+            case 1:
+                Editor.Show();
                 break;
             case 2:
                 Console.WriteLine("View");
                 break;
             case 3: 
-                 Console.Clear();
-                 Environment.Exit(0);
-                 break;
+                Console.Clear();
+                Environment.Exit(0);
+                break;
             default:
                 Show();
                 break;
