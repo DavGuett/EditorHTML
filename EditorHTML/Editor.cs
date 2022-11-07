@@ -25,6 +25,7 @@ public static class Editor
         } while (Console.ReadKey().Key != ConsoleKey.Escape);
         
         Console.WriteLine(" Salvar o arquivo?");
+        Viewer.Show(file.ToString());
         
     }
 }
